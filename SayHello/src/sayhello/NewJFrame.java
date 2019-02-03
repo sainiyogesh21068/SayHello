@@ -350,9 +350,6 @@ public class NewJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_LoginButton2ActionPerformed
 
-     public boolean getScrollableTracksViewportWidth() {
-          return true;
-     }
     private void Sendd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Sendd1ActionPerformed
        if(user1!="null" && user2!=null){
             StyledDocument doc1 = textPane1.getStyledDocument();
