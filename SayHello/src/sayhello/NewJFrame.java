@@ -39,11 +39,14 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     void wrapText(){
-        chat1.setWrapStyleWord(true);
-        chat2.setWrapStyleWord(true);
+        //chat1.setWrapStyleWord(true);
+        //chat2.setWrapStyleWord(true);
         chat1.setLineWrap(true);
         chat2.setLineWrap(true);
         logout1.setVisible(false);
+        logout2.setVisible(false);
+        textPane.setEditable(false);
+        textPane1.setEditable(false);
     }
     void showimage()
     {
@@ -191,8 +194,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        textPane1.setBackground(new java.awt.Color(204, 204, 204));
-        textPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        textPane1.setBackground(new java.awt.Color(240, 240, 240));
+        textPane1.setBorder(null);
         textPane1.setFont(new java.awt.Font("Comic Sans MS", 0, 15)); // NOI18N
         jScrollPane4.setViewportView(textPane1);
 
@@ -286,6 +289,8 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        logout1.setBackground(new java.awt.Color(121, 247, 139));
+        logout1.setFont(new java.awt.Font("Comic Sans MS", 0, 15)); // NOI18N
         logout1.setText("Logout");
         logout1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -312,12 +317,11 @@ public class NewJFrame extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Login1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LoginButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(LoginButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Login1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(logout1)
-                .addGap(4, 4, 4))
+                .addComponent(logout1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel5.setBackground(new java.awt.Color(10, 206, 27));
@@ -333,6 +337,8 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        logout2.setBackground(new java.awt.Color(121, 247, 139));
+        logout2.setFont(new java.awt.Font("Comic Sans MS", 0, 15)); // NOI18N
         logout2.setText("Logout");
         logout2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -352,20 +358,19 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(LoginButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(137, 137, 137)
+                        .addGap(136, 136, 136)
                         .addComponent(logout2)))
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Login2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LoginButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(logout2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(logout2, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE))
         );
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
@@ -375,18 +380,19 @@ public class NewJFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(typing1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(typing1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(Welcome1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(Welcome1, javax.swing.GroupLayout.PREFERRED_SIZE, 363, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(30, 30, 30)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
@@ -413,10 +419,10 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jSeparator1)
                 .addContainerGap())
@@ -432,6 +438,8 @@ public class NewJFrame extends javax.swing.JFrame {
             Welcome1.setForeground(new java.awt.Color(10,206,27));
             Login1.setVisible(false);
             LoginButton1.setVisible(false);
+            logout1.setText("Logout, "+user1 );
+            logout1.setVisible(true);
         }
         else
         {
@@ -449,6 +457,10 @@ public class NewJFrame extends javax.swing.JFrame {
             Welcome2.setForeground(new java.awt.Color(10,206,27));
             Login2.setVisible(false);
             LoginButton2.setVisible(false);
+            logout2.setText("Logout, "+user2 );
+            logout2.setVisible(true);
+            
+            
         }
         else
         {
@@ -467,7 +479,7 @@ public class NewJFrame extends javax.swing.JFrame {
             //to wrap text under 30 characters
             String newmsg="";
             String str = msg1;
-            String[] splitStr = str.split("\\s+");
+            String[] splitStr= str.split("\\s+");
             int len=splitStr.length;
             System.out.println(len + "\n");
             int i=0;
@@ -632,12 +644,19 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void logout2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logout2ActionPerformed
 
-        if(user2.isEmpty()){ 
-            user2=Login2.getText();
-            Welcome2.setText("Welcome, " + user2);
-            Welcome2.setForeground(new java.awt.Color(10,206,27));
-            Login2.setVisible(false);
-            LoginButton2.setVisible(false);
+        if(!user2.isEmpty()){ 
+            user2=null;
+//            user2=Login2.getText();
+            Welcome2.setText("!!! Please Login First !!!");
+            textPane.setText("");
+            textPane1.setText("");
+            Welcome2.setForeground(new java.awt.Color(255,0,0));
+            Login2.setVisible(true);
+            LoginButton2.setVisible(true);
+            logout2.setVisible(false);
+            JOptionPane.showMessageDialog(this, "Logout Successfull");
+            count1=0;
+            count2=0;
         } // TODO add your handling code here:
     }//GEN-LAST:event_logout2ActionPerformed
 
@@ -662,7 +681,20 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_chat1KeyTyped
 
     private void logout1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logout1ActionPerformed
-                // TODO add your handling code here:
+        if(!user1.isEmpty()){ 
+            user1=null;
+//            user2=Login2.getText();
+            Welcome1.setText("!!! Please Login First !!!");
+            textPane.setText("");
+            textPane1.setText("");
+            Welcome1.setForeground(new java.awt.Color(255,0,0));
+            Login1.setVisible(true);
+            LoginButton1.setVisible(true);
+            logout1.setVisible(false);
+            JOptionPane.showMessageDialog(this, "Logout Successfull");
+            count1=0;
+            count2=0;
+        }        // TODO add your handling code here:
     }//GEN-LAST:event_logout1ActionPerformed
 
     /**
