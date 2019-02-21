@@ -47,12 +47,14 @@ public class NewJFrame extends javax.swing.JFrame {
         logout2.setVisible(false);
         textPane.setEditable(false);
         textPane1.setEditable(false);
+        
     }
     void showimage()
     {
         Image img1=null;
         Toolkit tk=this.getToolkit();
-        img1=tk.getImage("C:\\Users\\Yogesh\\Pictures\\send3.png");
+        String pathToImageSortBy = "sayHello/resources/send3.png";
+        img1=tk.getImage(getClass().getClassLoader().getResource(pathToImageSortBy));
         Image img2=img1.getScaledInstance(w,h,Image.SCALE_SMOOTH);
         ImageIcon ik=new ImageIcon(img2);
         Sendd1.setIcon(ik);
@@ -112,11 +114,13 @@ public class NewJFrame extends javax.swing.JFrame {
         panel1.setBackground(new java.awt.Color(10, 206, 27));
         panel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        jScrollPane1.setBackground(new java.awt.Color(0, 0, 0));
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         textPane.setBackground(new java.awt.Color(204, 204, 204));
-        textPane.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        textPane.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.green, new java.awt.Color(0, 102, 0), new java.awt.Color(204, 204, 204)));
         textPane.setFont(new java.awt.Font("Comic Sans MS", 0, 15)); // NOI18N
+        textPane.setOpaque(false);
         jScrollPane1.setViewportView(textPane);
 
         jPanel3.setBackground(new java.awt.Color(10, 206, 27));
@@ -194,9 +198,10 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
-        textPane1.setBackground(new java.awt.Color(240, 240, 240));
-        textPane1.setBorder(null);
+        textPane1.setBackground(new java.awt.Color(0, 0, 255));
+        textPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.black, java.awt.Color.green, new java.awt.Color(0, 153, 51), new java.awt.Color(153, 153, 153)));
         textPane1.setFont(new java.awt.Font("Comic Sans MS", 0, 15)); // NOI18N
+        textPane1.setOpaque(false);
         jScrollPane4.setViewportView(textPane1);
 
         jPanel2.setBackground(new java.awt.Color(10, 206, 27));
@@ -651,6 +656,7 @@ public class NewJFrame extends javax.swing.JFrame {
             textPane.setText("");
             textPane1.setText("");
             Welcome2.setForeground(new java.awt.Color(255,0,0));
+            Login2.setText("");
             Login2.setVisible(true);
             LoginButton2.setVisible(true);
             logout2.setVisible(false);
@@ -688,6 +694,7 @@ public class NewJFrame extends javax.swing.JFrame {
             textPane.setText("");
             textPane1.setText("");
             Welcome1.setForeground(new java.awt.Color(255,0,0));
+            Login1.setText("");
             Login1.setVisible(true);
             LoginButton1.setVisible(true);
             logout1.setVisible(false);
